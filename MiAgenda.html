@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <main>
+        <section id="newActividad" class="container">
+            <input type="text" id="nombre" placeholder="Actividad">
+            <input type="text" id="descripcion" placeholder="Descripcion">
+            <input type="text" id="ubicacion" placeholder="Ubicacion">
+            <input type="time" id="horadeI">
+            <input type="time" id="horadeF">
+            <button onclick="agregarActividad()">Agregar Actividad</button>
+        </section>
+
+        <section id="agenda" class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>Descripcion</th>
+                        <th>Ubicacion</th>
+                        <th>Hora de Inicio</th>
+                        <th>Hora de Fin</th>
+                    </tr>
+                </thead>
+                <tbody id="agendaTabla">
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+<script src="./funciones.js">
+</script>
+</html>
