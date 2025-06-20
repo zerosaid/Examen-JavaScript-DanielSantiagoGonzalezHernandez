@@ -1,40 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mi Agenda</title>
+    <link rel="stylesheet" href="estilos.css" />
 </head>
-<body>
+<body onload="cargarAgenda(new Date().toISOString().split('T')[0])">
     <main>
+        <h2>Mi Agenda Personal</h2>
+        <p><strong>Filtrar por fecha:</strong></p>
+        <input type="date" id="fechaActividad" onchange="cargarAgenda(this.value)">
+        
         <section id="newActividad" class="container">
+            <h3>Agregar Actividad</h3>
             <input type="text" id="nombre" placeholder="Actividad">
-            <input type="text" id="descripcion" placeholder="Descripcion">
-            <input type="text" id="ubicacion" placeholder="Ubicacion">
+            <input type="text" id="descripcion" placeholder="Descripción">
+            <input type="text" id="ubicacion" placeholder="Ubicación">
             <input type="time" id="horadeI">
             <input type="time" id="horadeF">
             <button onclick="agregarActividad()">Agregar Actividad</button>
         </section>
 
         <section id="agenda" class="container">
-            <table>
+            <h3>Actividades del Día</h3>
+            <table border="1" cellpadding="6" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Actividad</th>
-                        <th>Descripcion</th>
-                        <th>Ubicacion</th>
+                        <th>Descripción</th>
+                        <th>Ubicación</th>
                         <th>Hora de Inicio</th>
                         <th>Hora de Fin</th>
                     </tr>
                 </thead>
-                <tbody id="agendaTabla">
-                </tbody>
+                <tbody id="agendaTabla"></tbody>
             </table>
         </section>
+
+        <br>
+        <button onclick="cerrarSesion()">Cerrar Sesión</button>
     </main>
 </body>
-<script src="./funciones.js">
-</script>
+<script src="funciones.js"></script>
 </html>

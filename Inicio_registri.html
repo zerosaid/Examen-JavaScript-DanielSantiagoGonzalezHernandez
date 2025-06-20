@@ -1,42 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inicio | MiAgenda</title>
+    <link rel="stylesheet" href="./estilos.css" />
 </head>
 <body>
     <main>
         <section>
-            <h1>Hola Bienvenido a MyWeek</h1>
-            <h3>Tu Agenda personal</h3>
-            <Button onclick="mostrar()"> Iniciar Secion </Button>
-            <button onclick="mostrar()"> Registrarse </button>
+            <h1>Bienvenido a MyWeek</h1>
+            <h3>Tu Agenda Personal</h3>
+            <button onclick="mostrar()">Iniciar Sesión</button>
+            <button onclick="mostrarRegistro()">Registrarse</button>
         </section>
 
         <section id="inicio-secion" class="container ocultar">
-            <h2> Bienvenido! </h2>
-            <input type="email" id="correo" placeholder="Ingresa el correo">
-            <br><br>
-            <input type="password" id="contraseña" placeholder="Ingresa la contraseña">
-            <br><br>
-            <button onclick="">Iniciar secion</button><br>
-            <button onclick="volver">❌</button>
+            <h2>Iniciar Sesión</h2>
+            <input type="email" id="correo" placeholder="Correo electrónico"><br><br>
+            <input type="password" id="contraseña" placeholder="Contraseña"><br><br>
+            <button onclick="iniciarSesion()">Iniciar</button>
+            <button onclick="volver()">❌</button>
         </section>
 
-
         <section id="registro" class="container ocultar">
-            <h2> Registrate! </h2>
-            <input type="text" id="usuario" placeholder="Ingrese nombre de usuario"> <br><br>
-            <input type="email" placeholder="Ingrese correo" id="email"> <br><br>
-            <input type="password" id="contraseña" placeholder="Ingresa la contraseña"> <br> <br>
-            <button onclick="'registrate'">Registrarse</button><br>
-            <button onclick="volver">❌</button>
+            <h2>Registro</h2>
+            <input type="text" id="usuario" placeholder="Nombre de usuario"><br><br>
+            <input type="email" id="email" placeholder="Correo electrónico"><br><br>
+            <input type="password" placeholder="Contraseña"><br><br>
+            <button onclick="registrarse()">Registrarse</button>
+            <button onclick="volver()">❌</button>
         </section>
     </main>
 </body>
-<script src="./funciones.js">
-</script>
+<script src="./funciones.js"></script>
 </html>
